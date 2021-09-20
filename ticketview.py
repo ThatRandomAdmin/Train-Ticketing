@@ -3,6 +3,7 @@ import os
 import tkinter as tk
 from tkinter import filedialog
 import shutil
+import getpass
 
 #View ticket
 def viewtick(fname, sname, getdate):
@@ -28,9 +29,17 @@ def mainUI(completeName):
     def destroyit():
         root.destroy()
 
-    #Save to C drive
+    #Refresh the save button
+    def refresh():
+        button.configure(text="Save Ticket")
+
+    #Save to downloads drive
     def save():
-        shutil.copyfile(completeName, "C:")
+        usern = getpass.getuser()
+        saveto = "C:/Users/" + usern + "/Downloads/"
+        shutil.copy(completeName, str(saveto))
+        button.configure(text="Succsefully downloaded!")
+        button.after(1500, refresh)
 
     #Tkinter  code
     root = tk.Tk()

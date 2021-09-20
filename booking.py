@@ -5,7 +5,7 @@ import os
 def enter(fname, sname, geton, leave, ticktype, getdate):
     save_path = 'tickets/'
     file_name = (getdate.replace("/", "_") + (".txt"))
-    fldr = fname[0] + sname
+    fldr = (fname[0] + sname).lower()
     fldr_path = save_path + fldr
 
     #Working out distance travled
@@ -44,7 +44,7 @@ def enter(fname, sname, geton, leave, ticktype, getdate):
         #Adding data to the file
         completeName = fldr_path + '/' + file_name
 
-        data1 = ("\n########################################\n Name: ", fname, " ", sname, "\n Date: ", getdate, "\n Joining: ", geton, "\n Departing: ", leave, "\n", "\n Ticket type: ", ticktype, "\n", "\n Cost: ", cost)
+        data1 = ("\n########################################\n Name: ", fname.title(), " ", sname.title(), "\n Date: ", getdate, "\n Joining: ", geton, "\n Departing: ", leave, "\n", "\n Ticket type: ", ticktype, "\n", "\n Cost: ", cost)
         data = ''.join(data1)
 
         if os.path.exists(completeName):

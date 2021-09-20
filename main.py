@@ -125,19 +125,19 @@ def book():
 
         #Checks for valid data
         if fname == fname1:
-            label1.configure(text="Please enter valid text")
+            label1.configure(text="Please enter your forename.")
             label1.after(1200, refresh)
             
         elif sname == sname1:
-            label1.configure(text="Please enter valid text")
+            label1.configure(text="Please enter your surname.")
             label1.after(1200, refresh)
 
         elif geton == leave:
-            label1.configure(text="Please enter valid text")
+            label1.configure(text="Please enter valid stations.")
             label1.after(1200, refresh)
 
         elif getdate == getdate1:
-            label1.configure(text="Please enter valid text")
+            label1.configure(text="Please enter a date.")
             label1.after(1200, refresh)
 
         #Sending data
@@ -215,15 +215,15 @@ def view():
 
         #Checks for valid data
         if fname == fname1:
-            label1.configure(text="Please enter valid text")
+            label1.configure(text="Please enter your forename.")
             label1.after(1200, refresh)
 
         elif sname == sname1:
-            label1.configure(text="Please enter valid text")
+            label1.configure(text="Please enter your surname.")
             label1.after(1200, refresh)
 
         elif getdate == getdate1:
-            label1.configure(text="Please enter valid text")
+            label1.configure(text="Please enter a date.")
             label1.after(1200, refresh)
 
         #Sending data
@@ -239,13 +239,13 @@ def view():
                 completeName = fldr_path + '/' + file_name
                 if os.path.exists(completeName):
                     mainUI(completeName)
-                    label1.configure(text="Succsefully ordered!")
+                    label1.configure(text="Succsefully found!")
                     label1.after(1500, destroyit)
                 else:
-                    label1.configure(text="No ticket found")
+                    label1.configure(text="No ticket found.")
                     label1.after(1200, refresh)
             else:
-                label1.configure(text="No ticket found")
+                label1.configure(text="No ticket found.")
                 label1.after(1200, refresh)
 
     #Button to enter the inputed data
