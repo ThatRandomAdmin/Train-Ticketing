@@ -1,4 +1,10 @@
 # Train-Ticketing
 Tkinter software to book train tickets
 
-To use, you will need to install tkcalendar through pip
+**Prerequisites:**
+- Python
+- Tkinter (Mac only)
+- Tkcalendar (Through pip)
+
+**Setup:**
+- Run the 
