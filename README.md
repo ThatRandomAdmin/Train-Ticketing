@@ -7,4 +7,4 @@ Tkinter software to book train tickets
 - Tkcalendar (Through pip)
 
 **Setup:**
-- Run the 
+- Run the main.py file, and enjoy!
